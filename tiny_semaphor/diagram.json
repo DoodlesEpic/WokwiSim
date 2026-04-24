@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-attiny85", "id": "tiny", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 155.2,
+      "left": 23.4,
+      "rotate": 180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 110.4,
+      "left": -48.55,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 232,
+      "left": 23.4,
+      "rotate": 180,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 110.4,
+      "left": -86.95,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 193.6,
+      "left": 23.4,
+      "rotate": 180,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 110.4,
+      "left": -67.75,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "led1:C", "tiny:GND", "black", [ "v0" ] ],
+    [ "tiny:PB5", "r2:1", "limegreen", [ "v18", "h-90.4" ] ],
+    [ "r2:2", "led2:A", "limegreen", [ "h-0.55", "v95.65" ] ],
+    [ "led2:C", "tiny:GND", "black", [ "h38", "v-229.2" ] ],
+    [ "tiny:PB3", "r3:1", "gold", [ "v37.2", "h-52.4" ] ],
+    [ "r3:2", "led3:A", "gold", [ "v46.8" ] ],
+    [ "led3:C", "tiny:GND", "black", [ "h18.8", "v-181.2" ] ],
+    [ "tiny:PB4", "r1:1", "orange", [ "v46.8", "h-24" ] ],
+    [ "r1:2", "led1:A", "orange", [ "h0", "v8.4" ] ]
+  ],
+  "dependencies": {}
+}
